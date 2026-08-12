@@ -1,0 +1,182 @@
+:root {
+  --button-background: hsl(158, 36%, 37%);
+  --active: hsl(158, 42%, 18%);
+  --Black: hsl(212, 21%, 14%);
+  --Grey: hsl(228, 12%, 48%);
+  --Cream: hsl(30, 38%, 92%);
+  --White: hsl(0, 0%, 100%);
+}
+
+/* Montserrat (Medium & Bold) */
+@font-face {
+  font-family: 'Montserrat';
+  src: url('./fonts/montserrat-v31-latin/montserrat-v31-latin-500.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('./fonts/montserrat-v31-latin/montserrat-v31-latin-700.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Fraunces (Bold) */
+@font-face {
+  font-family: 'Fraunces';
+  src: url('./fonts/fraunces-v38-latin/fraunces-v38-latin-700.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+*, *::after, *::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--Cream);
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-block-size: 100vh;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  color: var(--Grey);
+}
+
+main {
+  /* inline-size: 350px; */
+  /* inline-size: 600px; */
+  inline-size: clamp(21.875rem, 16.37323943661972rem + 23.474178403755868vw, 37.5rem);
+}
+
+.product-card {
+  inline-size: 100%;
+  background-color: var(--White);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-img {
+  inline-size: 100%;
+  aspect-ratio: 1 / 0.979;
+  object-fit: cover;
+  object-position: center;
+}
+
+.product-content {
+  padding-inline: 2rem;
+  /* padding-block-start: 25px; */
+  /* padding-block-start: 32px; */
+  padding-block-start: clamp(1.5625rem, 1.408450704225352rem + 0.6572769953051643vw, 2rem);
+  /* padding-block-end: 32px; */
+  /* padding-block-end: 30px; */
+  padding-block-end: clamp(1.875rem, 2.044014084507042rem + -0.18779342723004694vw, 2rem);
+}
+
+.product-category {
+  letter-spacing: 0.31rem;
+  font-size: 0.75rem;
+  /* margin-block-end: 25px; */
+  /* margin-block-end: 20px; */
+  margin-block-end: clamp(1.25rem, 1.6725352112676057rem + -0.4694835680751174vw, 1.5625rem);
+}
+
+h1 {
+  font-size: 1.97rem;
+  font-family: "Fraunces", serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-variation-settings:
+    "SOFT" 0,
+    "WONK" 0;
+  color: var(--Black);
+  line-height: 2rem;
+  /* margin-block-end: 25px; */
+  margin-block-end: 1.5625rem;
+}
+
+.product-description {
+  /* line-height: 22px; */
+  /* line-height: 23px; */
+  line-height: clamp(1.375rem, 1.352992957746479rem + 0.09389671361502347vw, 1.4375rem);
+  /* margin-block-end: 20px; */
+  /* margin-block-end: 25px; */
+  margin-block-end: clamp(1.25rem, 1.1399647887323943rem + 0.4694835680751174vw, 1.5625rem);
+}
+
+.product-price {
+  display: flex;
+  align-items: center;
+  /* gap: 17px; */
+  /* gap: 20px; */
+  gap: clamp(1.0625rem, 0.9964788732394366rem + 0.2816901408450704vw, 1.25rem);
+  /* margin-block-end: 21px; */
+  /* margin-block-end: 26px; */
+  margin-block-end: clamp(1.3125rem, 1.2024647887323943rem + 0.4694835680751174vw, 1.625rem);
+}
+
+.updated-price {
+  color: var(--button-background);
+  font-weight: 700;
+  font-family: "Fraunces", serif;
+  font-size: 1.97rem;
+}
+
+.original-price {
+  font-size: 0.81rem;
+}
+
+button {
+  inline-size: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.6rem;
+  background-color: var(--button-background);
+  border: none;
+  border-radius: 0.5rem;
+  color: var(--White);
+  font-size: 0.95rem;
+  font-weight: 700;
+  /* padding-block: 16px; */
+  padding-block: 1rem;
+}
+
+.product-card button:hover, .product-card button:focus {
+  background-color: var(--active);
+  cursor: pointer;
+}
+
+button img {
+  aspect-ratio: 1 / 1;
+  inline-size: 0.9rem;
+  object-fit: cover;
+}
+
+@media screen and (width >= 37.5rem) {
+  .product-card {
+    flex-direction: row;
+  }
+
+  .product-card picture, .product-content {
+    flex: 1 1 0;
+    max-inline-size: 50%;
+  }
+
+  .product-img {
+    block-size: 100%;
+  }
+}
