@@ -17,7 +17,6 @@ This is a solution to the [Product preview card component challenge on Frontend 
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
 
 ## Overview
 
@@ -35,8 +34,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Solution URL]()
-- Live Site URL: [Live Site URL]()
+- Solution URL: [Solution URL](https://github.com/Faith-Rose1/Product-preview-card)
+- Live Site URL: [Live Site URL](https://faith-rose1.github.io/Product-preview-card/)
 
 ## My process
 
