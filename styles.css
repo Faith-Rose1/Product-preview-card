@@ -54,9 +54,7 @@ body {
 }
 
 main {
-  /* inline-size: 350px; */
-  /* inline-size: 600px; */
-  inline-size: clamp(21.875rem, 16.37323943661972rem + 23.474178403755868vw, 37.5rem);
+  inline-size: clamp(21.875rem, 80%, 37.5rem);
 }
 
 .product-card {
@@ -73,23 +71,18 @@ main {
   aspect-ratio: 1 / 0.979;
   object-fit: cover;
   object-position: center;
+  filter: brightness(0.85);
 }
 
 .product-content {
   padding-inline: 2rem;
-  /* padding-block-start: 25px; */
-  /* padding-block-start: 32px; */
   padding-block-start: clamp(1.5625rem, 1.408450704225352rem + 0.6572769953051643vw, 2rem);
-  /* padding-block-end: 32px; */
-  /* padding-block-end: 30px; */
   padding-block-end: clamp(1.875rem, 2.044014084507042rem + -0.18779342723004694vw, 2rem);
 }
 
 .product-category {
   letter-spacing: 0.31rem;
   font-size: 0.75rem;
-  /* margin-block-end: 25px; */
-  /* margin-block-end: 20px; */
   margin-block-end: clamp(1.25rem, 1.6725352112676057rem + -0.4694835680751174vw, 1.5625rem);
 }
 
@@ -104,27 +97,18 @@ h1 {
     "WONK" 0;
   color: var(--Black);
   line-height: 2rem;
-  /* margin-block-end: 25px; */
   margin-block-end: 1.5625rem;
 }
 
 .product-description {
-  /* line-height: 22px; */
-  /* line-height: 23px; */
   line-height: clamp(1.375rem, 1.352992957746479rem + 0.09389671361502347vw, 1.4375rem);
-  /* margin-block-end: 20px; */
-  /* margin-block-end: 25px; */
   margin-block-end: clamp(1.25rem, 1.1399647887323943rem + 0.4694835680751174vw, 1.5625rem);
 }
 
 .product-price {
   display: flex;
   align-items: center;
-  /* gap: 17px; */
-  /* gap: 20px; */
   gap: clamp(1.0625rem, 0.9964788732394366rem + 0.2816901408450704vw, 1.25rem);
-  /* margin-block-end: 21px; */
-  /* margin-block-end: 26px; */
   margin-block-end: clamp(1.3125rem, 1.2024647887323943rem + 0.4694835680751174vw, 1.625rem);
 }
 
@@ -151,7 +135,6 @@ button {
   color: var(--White);
   font-size: 0.95rem;
   font-weight: 700;
-  /* padding-block: 16px; */
   padding-block: 1rem;
 }
 
